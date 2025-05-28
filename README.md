@@ -37,8 +37,8 @@ The project is motivated by recent advances in **transformer models** (e.g., GPT
 ## Usage
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/cevher/crossdomaingnn.git
+   cd crossdomaingnn
    ```
 2. Install dependencies:
    ```bash
