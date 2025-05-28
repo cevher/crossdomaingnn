@@ -1,7 +1,7 @@
 
 # Cross-Domain Recommender System with GNNs
 
-This repository contains the code for a **Graph Neural Network (GNN)-based cross-domain recommender system**, designed to transfer user preference information from one domain (e.g., Books) to another (e.g., Electronics) with high accuracy, even in cold-start scenarios. The approach integrates **contrastive learning**, **domain-adversarial training**, and **multi-relational graph modeling**, inspired by cutting-edge research in recommendation systems and large language models.
+This repository contains the code for a **Graph Neural Network (GNN)-based cross-domain recommender system**, designed to transfer user preference information from one domain (e.g., Books) to another (e.g., Electronics) with high accuracy, even in cold-start scenarios. The approach integrates **contrastive learning**, **domain-adversarial training**, and **multi-relational graph modeling**, inspired by cutting-edge research in recommendation systems and large language models. We have used the Amazon Review Dataset provided at https://nijianmo.github.io/amazon/index.html by Ni, Li & McAuley, 2019.
 
 ## Table of Contents
 - [Background](#background)
@@ -68,6 +68,4 @@ Extensive experiments demonstrate superior performance of our model compared to 
 This project is licensed under the [MIT License](LICENSE).
 
 ## References
-- OpenAI’s GPT series and transformer architectures: https://openai.com/research
-- Knowledge graph-based recommender systems: [Wang et al., 2019](https://arxiv.org/abs/1905.08108)
-- Cross-domain contrastive learning for recommendations: [Li et al., 2024](https://doi.org/10.1016/j.knosys.2025.113109)
+- Ni J, Li J, McAuley J. 2019. Justifying recommendations using distantly-labeled reviews and fine-grained aspects. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP). 
