@@ -1,40 +1,39 @@
 
 # Cross-Domain Recommender System with GNNs
 
-This repository contains the code for a **Graph Neural Network (GNN)-based cross-domain recommender system**, designed to transfer user preference information from one domain (e.g., Books) to another (e.g., Electronics) with high accuracy, even in cold-start scenarios. The approach integrates **contrastive learning**, **domain-adversarial training**, and **multi-relational graph modeling**, inspired by cutting-edge research in recommendation systems and large language models. We have used the Amazon Review Dataset provided at https://nijianmo.github.io/amazon/index.html by Ni, Li & McAuley, 2019.
+## Description
+This project implements a cross-domain recommendation framework using Graph Neural Networks (GNNs). It focuses on transferring user preferences from a source domain (Books) to a target domain (Electronics), addressing challenges such as data sparsity and cold-start users. The model integrates:
+- Multi-relational user–item graphs
+- Contrastive learning
+- Domain-adversarial training
 
-## Table of Contents
-- [Background](#background)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Code Overview](#code-overview)
-- [Datasets](#datasets)
-- [Results](#results)
-- [License](#license)
-- [References](#references)
+## Dataset Information
+We use publicly available datasets:
+- **Amazon Product Reviews** – curated and published by Ni, Li, and McAuley (2019), available at: [https://nijianmo.github.io/amazon/index.html](https://nijianmo.github.io/amazon/index.html)
+- Datasets used: `Books.json.gz` and `Electronics.json.gz`
 
-## Background
-The project is motivated by recent advances in **transformer models** (e.g., GPT-4) and **graph-based recommendation systems**. Inspired by the cross-domain adaptability of large language models, this system aims to transfer knowledge between different item domains (Books and Electronics) to overcome challenges such as data sparsity and cold-start users.
-
-## Features
-- Construction of separate user–item graphs for source and target domains.
-- Integration of **contrastive learning** to align user embeddings across domains.
-- **Domain-adversarial training** to enforce domain-invariant representation learning.
-- Support for cold-start recommendation in sparse target domains.
-- Modular and extensible architecture for experimenting with new domains or embedding strategies.
+## Code Information
+The project contains:
+- `Code.ipynb`: Jupyter notebook including all steps from preprocessing to evaluation
+- `utils.py`: (optional, if modularized) for reusable preprocessing and modeling functions
+- `get_reviewer_ids()`: function to extract and align users across domains
 
 ## Requirements
-- Python 3.7+
-- Required libraries (install via `pip install -r requirements.txt`):
-  - `networkx`
-  - `numpy`
-  - `pandas`
-  - `scikit-learn`
-  - `torch` (PyTorch)
-  - `gzip` and `json` (for dataset preprocessing)
-  
-## Usage
+Install with:
+```bash
+pip install -r requirements.txt
+```
+Dependencies:
+- Python ≥ 3.7
+- networkx
+- numpy
+- pandas
+- scikit-learn
+- torch (PyTorch)
+- gzip
+- json
+
+## Usage Instructions
 1. Clone the repository:
    ```bash
    git clone https://github.com/cevher/crossdomaingnn.git
@@ -44,28 +43,33 @@ The project is motivated by recent advances in **transformer models** (e.g., GPT
    ```bash
    pip install -r requirements.txt
    ```
-3. Prepare datasets:
-   - Place `Books.json.gz` and `Electronics.json.gz` files in the project directory.
-4. Run preprocessing and model training:
-   - Launch the Jupyter notebook `Code.ipynb` and follow the step-by-step cells to:
-     - Extract user IDs from datasets.
-     - Build user–item graphs for each domain.
-     - Train the GNN model with cross-domain alignment and adversarial learning.
+3. Add datasets (`Books.json.gz`, `Electronics.json.gz`) to the project root.
+4. Run `Code.ipynb` to:
+   - Preprocess raw data
+   - Construct domain-specific graphs
+   - Train and evaluate the GNN-based model
 
-## Code Overview
-- `Code.ipynb`: The main Jupyter notebook with code for preprocessing, graph construction, model training, and evaluation.
-- `get_reviewer_ids()`: Function to extract user IDs from gzip-compressed JSON files (Books and Electronics datasets).
-- Additional functions and modules will process data, implement contrastive learning, and integrate domain-adversarial components.
+## Methodology
+- **Graph Construction**: Build user–item bipartite graphs for both domains.
+- **User Alignment**: Identify common users across datasets using reviewer IDs.
+- **Contrastive Learning**: Encourage embedding similarity for the same user across domains.
+- **Domain-Adversarial Training**: Enforce domain-invariant user representation through a gradient reversal layer.
+- **Evaluation Metrics**: Precision@K, Recall@K, and NDCG.
 
-## Datasets
-- Amazon Product Reviews datasets (`Books.json.gz`, `Electronics.json.gz`) available at: https://nijianmo.github.io/amazon/index.html  
-- Use `get_reviewer_ids()` to extract user information for graph construction.
-
-## Results
-Extensive experiments demonstrate superior performance of our model compared to traditional CDR baselines, particularly in **cold-start scenarios** where the target domain lacks sufficient data. Performance metrics include precision, recall, and NDCG.
+## Evaluation
+- **Evaluation Setting**: Cold-start scenario where the target domain lacks sufficient interaction data.
+- **Baseline Comparison**: Compared against standard collaborative filtering and CDR baselines.
+- **Ablation Study**: Included in the Results section of the manuscript to assess the contribution of each module (contrastive loss, adversarial layer).
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+This project is released under the [MIT License](LICENSE).
 
-## References
-- Ni J, Li J, McAuley J. 2019. Justifying recommendations using distantly-labeled reviews and fine-grained aspects. In Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing (EMNLP). 
+## Citation
+Please cite the dataset and model as:
+> Ni J, Li J, McAuley J. (2019). Justifying recommendations using distantly-labeled reviews and fine-grained aspects. *EMNLP 2019*. [https://nijianmo.github.io/amazon/index.html](https://nijianmo.github.io/amazon/index.html)
+
+## Contribution Guidelines
+We welcome contributions! To contribute:
+1. Fork the repo
+2. Create a feature branch
+3. Submit a pull request with detailed explanation
