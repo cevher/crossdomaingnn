@@ -10,7 +10,7 @@ This project implements a cross-domain recommendation framework using Graph Neur
 ## Dataset Information
 We use publicly available datasets:
 - **Amazon Product Reviews** – curated and published by Ni, Li, and McAuley (2019), available at: [https://nijianmo.github.io/amazon/index.html](https://nijianmo.github.io/amazon/index.html)
-- Datasets used: `Books.json.gz` and `Electronics.json.gz`
+- Datasets used: `Books.json`, `Electronics`, `Movies and TV`, `CDs and Vinyl`, `Clothing Shoes and Jewelry`, `Home and Kitchen`.
 
 ## Code Information
 The project contains:
