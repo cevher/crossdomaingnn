@@ -1,0 +1,178 @@
+Using device: cuda
+Dataset statistics (iterative 5-core shared-user split)
+  Shared users: 4,513
+  Source Books interactions after shared-user filter: 156,414
+  Target Electronics interactions after shared-user filter: 131,211
+  Users: 4,513
+  Items total: 35,018
+  Target Electronics items: 15,822
+  Target split: train=104,968, val=13,121, test=13,122
+  Test items unseen in target train: 70 (0.89%)
+
+Metadata coverage validation
+  Books source:
+    item text file: books_item_texts_filtered.csv
+    file exists: True
+    item text rows: 1,459,222
+    unique interaction items: 1,459,222
+    exact matched item texts: 1,459,222
+    exact item_id coverage: 100.00%
+    missing/empty/too-short texts (<10 chars): 1,115 (0.08%)
+  Electronics target:
+    item text file: electronics_item_texts_filtered.csv
+    file exists: True
+    item text rows: 489,371
+    unique interaction items: 489,371
+    exact matched item texts: 489,371
+    exact item_id coverage: 100.00%
+    missing/empty/too-short texts (<10 chars): 43 (0.01%)
+
+  Random Books item-text examples:
+    item_id: 1571517235
+    text: Easter Colors Book by Dandi Daley Mackall
+    item_id: 0829436235
+    text: Simple Faith: Moving Beyond Religion as You Know It to Grow in Your Relationship with God For many people, faith is based on creeds, doctrine, and head knowledge. It's about mastering the "facts" and having the "right" answers. But best-selling author Margaret Silf believes that faith is not about m
+    item_id: 1592531717
+    text: Polymer Clay Surface Design Recipes: 100 Mixed-Media Techniques Plus Project Ideas Regardless of your level of experience with polymer clay, the techniques and recipes for creating for combining clay with other media will inspire you to create unique surface designs. In addition to covering basic po
+    item_id: 1328702278
+    text: After the Shot Drops A powerful novel about friendship, basketball, and one teen’s mission to create a better life for his family. Written in the tradition of Jason Reynolds, Matt de la Peña, and Walter Dean Myers, After the Shot Drops now has three starred reviews! * “Belongs on the shelf alongside
+    item_id: 1976453674
+    text: The Three Rings: An Adventure for Four Against Darkness for characters of level 3 and 4 The Three Rings is and adventure for Four Against Darkness. It is recommended for character levels 3 and 4. While exploring a forest, the party stumbles upon a young nobleman. His three seal rings have been stole
+
+  Random Electronics item-text examples:
+    item_id: B01M1R6NAZ
+    text: Ultimate Support ULTI-BOOM PRO - FB Fixed Length Microphone Boom Arm with One-touch Adjustment and Die-Cast Counterweight Ergonomic adjustment knobs Heavy-duty counterweight Aluminum tubing with architectural Anodized finish Country of Origin: China Cassette tapes and black and white televisions hav
+    item_id: B0764GQBPT
+    text: HiVi Acoustics Swans- DIY 2.2A - DIY Speaker Kit - 2-Way Bookshelf Speakers Near-Field Use - Compact Wooden Cabinet - Pair - Black 2.2 BOOKSHELF SPEAKERS – Full-range sound for accurate image and balanced frequency response; CLASSIC DESIGN - A two-way fourth vented bookshelf speakers with aesthetic 
+    item_id: B0777PH7R2
+    text: Esky Wireless RF Item Locator Key Finder Item Tracker Phone Tracker Finder Anything Finder with 1 RF Transmitter 4 Receivers Remote Control, Pet, Wallet, Cat Tracker (ES-KF03-WE) BEEPS AND FLASHES: Uses loud sounds and LED light prompts to help you find lost cats, keys, and remote controls. Let what
+    item_id: B0B75GY6RV
+    text: WONNIE 10" Car DVD Players, Portable DVD Player Dual Screen Play Two Different or The Same Movie with 2 Headrest Mount, 5 Hours Rechargeable Battery, Last Memory, AV Out&in, Support USB/SD/Sync TV 🚓🚓【𝟐 𝐱 𝐂𝐚𝐫 𝐃𝐕𝐃 𝐏𝐥𝐚𝐲𝐞𝐫】WONNIE 2023 New generation 10 inches dual dvd players for car adopt newly chip te
+    item_id: B01KXBCMTW
+    text: iPad Pro 12.9 Inch Case - Samgg 360 Degree Rotating Stand Leather Case with Smart Cover Auto Sleep/Wake Feature for Apple 12.9-inch iPad Pro (2015 Version) (Paisley Waves 2) Electronics Computers & Accessories Tablet Accessories Bags, Cases & Sleeves Cases
+
+Embedding cache validation
+  books:
+    embeddings: books_item_embeddings.pt exists=True
+    index map: books_item_id_to_index.json exists=True
+    embedding shape: (1459222, 384)
+    mapped item ids: 1,459,222
+  electronics:
+    embeddings: electronics_item_embeddings.pt exists=True
+    index map: electronics_item_id_to_index.json exists=True
+    embedding shape: (489371, 384)
+    mapped item ids: 489,371
+
+Running metadata sensitivity: retention=1.00, retained_source_items=19,196, retained_target_items=15,822
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 001 train_loss=2.837781 val_RMSE=1.208451 val_MAE=0.685163 val_NDCG@10=0.028276
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 002 train_loss=2.199176 val_RMSE=1.210916 val_MAE=0.666811 val_NDCG@10=0.027988
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 003 train_loss=2.201285 val_RMSE=1.211277 val_MAE=0.666087 val_NDCG@10=0.027892
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 004 train_loss=2.198682 val_RMSE=1.210443 val_MAE=0.666786 val_NDCG@10=0.028127
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 005 train_loss=2.194152 val_RMSE=1.208945 val_MAE=0.670083 val_NDCG@10=0.027997
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 006 train_loss=2.186059 val_RMSE=1.206132 val_MAE=0.679437 val_NDCG@10=0.028962
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 007 train_loss=2.169671 val_RMSE=1.201638 val_MAE=0.692442 val_NDCG@10=0.028431
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 008 train_loss=2.140147 val_RMSE=1.193690 val_MAE=0.691084 val_NDCG@10=0.028876
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 009 train_loss=2.076031 val_RMSE=1.178050 val_MAE=0.683288 val_NDCG@10=0.028197
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 010 train_loss=1.981846 val_RMSE=1.157748 val_MAE=0.669746 val_NDCG@10=0.028296
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 011 train_loss=1.882562 val_RMSE=1.132238 val_MAE=0.653515 val_NDCG@10=0.027686
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 012 train_loss=1.779734 val_RMSE=1.112572 val_MAE=0.651623 val_NDCG@10=0.028271
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 013 train_loss=1.691435 val_RMSE=1.096896 val_MAE=0.636271 val_NDCG@10=0.030638
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 014 train_loss=1.622621 val_RMSE=1.088076 val_MAE=0.647165 val_NDCG@10=0.030183
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 015 train_loss=1.564985 val_RMSE=1.077833 val_MAE=0.635082 val_NDCG@10=0.030138
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 016 train_loss=1.523715 val_RMSE=1.078606 val_MAE=0.645386 val_NDCG@10=0.029996
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 017 train_loss=1.492062 val_RMSE=1.080410 val_MAE=0.650179 val_NDCG@10=0.032209
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 018 train_loss=1.462276 val_RMSE=1.080479 val_MAE=0.648729 val_NDCG@10=0.030734
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 019 train_loss=1.434138 val_RMSE=1.079371 val_MAE=0.649818 val_NDCG@10=0.031249
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 020 train_loss=1.404286 val_RMSE=1.076635 val_MAE=0.640112 val_NDCG@10=0.031872
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 021 train_loss=1.374913 val_RMSE=1.074457 val_MAE=0.636127 val_NDCG@10=0.031898
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 022 train_loss=1.346578 val_RMSE=1.076135 val_MAE=0.641272 val_NDCG@10=0.033392
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 023 train_loss=1.316875 val_RMSE=1.079127 val_MAE=0.641822 val_NDCG@10=0.032379
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 024 train_loss=1.288935 val_RMSE=1.084549 val_MAE=0.651749 val_NDCG@10=0.032110
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 025 train_loss=1.258320 val_RMSE=1.085234 val_MAE=0.649254 val_NDCG@10=0.032978
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 026 train_loss=1.228738 val_RMSE=1.086325 val_MAE=0.650667 val_NDCG@10=0.031957
+metadata_sensitivity temperature=0.2 lambda_cl=0.1: early stopping at epoch 26; best epoch was 21.
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 final: val_RMSE=1.074457 test_RMSE=1.060483
+Saved 1 completed metadata sensitivity row(s): C:\Users\efeoz\OneDrive\Desktop\Cross Domain Yeniden\cross\results_metadata_sensitivity_books_electronics_5core.csv
+
+Running metadata sensitivity: retention=0.50, retained_source_items=9,598, retained_target_items=7,911
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 001 train_loss=2.932194 val_RMSE=1.208163 val_MAE=0.690964 val_NDCG@10=0.027212
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 002 train_loss=2.194285 val_RMSE=1.211540 val_MAE=0.668230 val_NDCG@10=0.028229
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 003 train_loss=2.194459 val_RMSE=1.211278 val_MAE=0.667674 val_NDCG@10=0.028407
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 004 train_loss=2.181509 val_RMSE=1.207748 val_MAE=0.669362 val_NDCG@10=0.029360
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 005 train_loss=2.149798 val_RMSE=1.198900 val_MAE=0.693586 val_NDCG@10=0.028375
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 006 train_loss=2.098731 val_RMSE=1.197490 val_MAE=0.686712 val_NDCG@10=0.028496
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 007 train_loss=2.027972 val_RMSE=1.197335 val_MAE=0.696637 val_NDCG@10=0.027955
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 008 train_loss=1.982668 val_RMSE=1.190564 val_MAE=0.703122 val_NDCG@10=0.028780
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 009 train_loss=1.932253 val_RMSE=1.175793 val_MAE=0.692052 val_NDCG@10=0.030082
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 010 train_loss=1.859445 val_RMSE=1.150887 val_MAE=0.678072 val_NDCG@10=0.028918
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 011 train_loss=1.777585 val_RMSE=1.126200 val_MAE=0.662575 val_NDCG@10=0.029021
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 012 train_loss=1.690125 val_RMSE=1.107002 val_MAE=0.656790 val_NDCG@10=0.029471
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 013 train_loss=1.614107 val_RMSE=1.096422 val_MAE=0.646613 val_NDCG@10=0.030644
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 014 train_loss=1.555182 val_RMSE=1.088971 val_MAE=0.644452 val_NDCG@10=0.030480
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 015 train_loss=1.506235 val_RMSE=1.084274 val_MAE=0.651290 val_NDCG@10=0.030870
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 016 train_loss=1.460809 val_RMSE=1.088400 val_MAE=0.662973 val_NDCG@10=0.031139
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 017 train_loss=1.420772 val_RMSE=1.087341 val_MAE=0.656973 val_NDCG@10=0.031484
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 018 train_loss=1.381040 val_RMSE=1.089960 val_MAE=0.662392 val_NDCG@10=0.030496
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 019 train_loss=1.347882 val_RMSE=1.079051 val_MAE=0.648587 val_NDCG@10=0.031674
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 020 train_loss=1.312025 val_RMSE=1.082667 val_MAE=0.654404 val_NDCG@10=0.031887
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 021 train_loss=1.281001 val_RMSE=1.082497 val_MAE=0.652630 val_NDCG@10=0.031678
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 022 train_loss=1.251756 val_RMSE=1.080381 val_MAE=0.650372 val_NDCG@10=0.031729
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 023 train_loss=1.222740 val_RMSE=1.081685 val_MAE=0.649093 val_NDCG@10=0.033658
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 024 train_loss=1.194925 val_RMSE=1.082090 val_MAE=0.651737 val_NDCG@10=0.033150
+metadata_sensitivity temperature=0.2 lambda_cl=0.1: early stopping at epoch 24; best epoch was 19.
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 final: val_RMSE=1.079051 test_RMSE=1.065491
+Saved 2 completed metadata sensitivity row(s): C:\Users\efeoz\OneDrive\Desktop\Cross Domain Yeniden\cross\results_metadata_sensitivity_books_electronics_5core.csv
+
+Running metadata sensitivity: retention=0.25, retained_source_items=4,799, retained_target_items=3,956
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 001 train_loss=2.987965 val_RMSE=1.210082 val_MAE=0.694710 val_NDCG@10=0.028550
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 002 train_loss=2.194310 val_RMSE=1.212074 val_MAE=0.668359 val_NDCG@10=0.028197
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 003 train_loss=2.195231 val_RMSE=1.211404 val_MAE=0.667157 val_NDCG@10=0.028180
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 004 train_loss=2.186164 val_RMSE=1.209923 val_MAE=0.668426 val_NDCG@10=0.028416
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 005 train_loss=2.168125 val_RMSE=1.205737 val_MAE=0.676493 val_NDCG@10=0.028546
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 006 train_loss=2.120950 val_RMSE=1.202204 val_MAE=0.719800 val_NDCG@10=0.028208
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 007 train_loss=2.025630 val_RMSE=1.196423 val_MAE=0.694823 val_NDCG@10=0.028275
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 008 train_loss=1.937267 val_RMSE=1.188718 val_MAE=0.702270 val_NDCG@10=0.029883
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 009 train_loss=1.874963 val_RMSE=1.178056 val_MAE=0.698974 val_NDCG@10=0.029555
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 010 train_loss=1.805092 val_RMSE=1.150112 val_MAE=0.676221 val_NDCG@10=0.028672
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 011 train_loss=1.723250 val_RMSE=1.133761 val_MAE=0.676675 val_NDCG@10=0.030041
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 012 train_loss=1.639859 val_RMSE=1.118976 val_MAE=0.670473 val_NDCG@10=0.030403
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 013 train_loss=1.566224 val_RMSE=1.105458 val_MAE=0.658212 val_NDCG@10=0.030182
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 014 train_loss=1.506438 val_RMSE=1.093211 val_MAE=0.647205 val_NDCG@10=0.030215
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 015 train_loss=1.454866 val_RMSE=1.091186 val_MAE=0.650991 val_NDCG@10=0.029820
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 016 train_loss=1.409724 val_RMSE=1.092491 val_MAE=0.658454 val_NDCG@10=0.030175
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 017 train_loss=1.371028 val_RMSE=1.094132 val_MAE=0.659837 val_NDCG@10=0.030832
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 018 train_loss=1.333376 val_RMSE=1.091251 val_MAE=0.656975 val_NDCG@10=0.030679
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 019 train_loss=1.298766 val_RMSE=1.087587 val_MAE=0.655519 val_NDCG@10=0.030733
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 020 train_loss=1.265014 val_RMSE=1.092220 val_MAE=0.660281 val_NDCG@10=0.031877
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 021 train_loss=1.233355 val_RMSE=1.093727 val_MAE=0.661661 val_NDCG@10=0.031092
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 022 train_loss=1.201948 val_RMSE=1.093725 val_MAE=0.662060 val_NDCG@10=0.030560
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 023 train_loss=1.173310 val_RMSE=1.092939 val_MAE=0.655906 val_NDCG@10=0.031070
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 024 train_loss=1.148067 val_RMSE=1.105252 val_MAE=0.671743 val_NDCG@10=0.032518
+metadata_sensitivity temperature=0.2 lambda_cl=0.1: early stopping at epoch 24; best epoch was 19.
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 final: val_RMSE=1.087587 test_RMSE=1.064357
+Saved 3 completed metadata sensitivity row(s): C:\Users\efeoz\OneDrive\Desktop\Cross Domain Yeniden\cross\results_metadata_sensitivity_books_electronics_5core.csv
+
+Running metadata sensitivity: retention=0.00, retained_source_items=0, retained_target_items=0
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 001 train_loss=3.941620 val_RMSE=1.318424 val_MAE=0.904753 val_NDCG@10=0.032179
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 002 train_loss=2.054852 val_RMSE=1.156923 val_MAE=0.659627 val_NDCG@10=0.028870
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 003 train_loss=1.790358 val_RMSE=1.149492 val_MAE=0.673832 val_NDCG@10=0.029847
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 004 train_loss=1.651285 val_RMSE=1.125358 val_MAE=0.672636 val_NDCG@10=0.029968
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 005 train_loss=1.551149 val_RMSE=1.107590 val_MAE=0.660660 val_NDCG@10=0.031036
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 006 train_loss=1.475928 val_RMSE=1.100377 val_MAE=0.659131 val_NDCG@10=0.030173
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 007 train_loss=1.421337 val_RMSE=1.092592 val_MAE=0.656490 val_NDCG@10=0.030378
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 008 train_loss=1.375420 val_RMSE=1.085980 val_MAE=0.652169 val_NDCG@10=0.029356
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 009 train_loss=1.337821 val_RMSE=1.082236 val_MAE=0.651067 val_NDCG@10=0.028968
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 010 train_loss=1.304413 val_RMSE=1.082533 val_MAE=0.650360 val_NDCG@10=0.028877
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 011 train_loss=1.273510 val_RMSE=1.082058 val_MAE=0.651358 val_NDCG@10=0.029389
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 012 train_loss=1.245263 val_RMSE=1.079993 val_MAE=0.650827 val_NDCG@10=0.028657
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 013 train_loss=1.218794 val_RMSE=1.079559 val_MAE=0.649282 val_NDCG@10=0.029699
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 014 train_loss=1.192739 val_RMSE=1.081143 val_MAE=0.651048 val_NDCG@10=0.029319
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 015 train_loss=1.166981 val_RMSE=1.081578 val_MAE=0.651074 val_NDCG@10=0.030853
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 016 train_loss=1.144068 val_RMSE=1.083496 val_MAE=0.653339 val_NDCG@10=0.029927
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 017 train_loss=1.119083 val_RMSE=1.083862 val_MAE=0.653908 val_NDCG@10=0.028970
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 epoch 018 train_loss=1.095957 val_RMSE=1.084609 val_MAE=0.654475 val_NDCG@10=0.030722
+metadata_sensitivity temperature=0.2 lambda_cl=0.1: early stopping at epoch 18; best epoch was 13.
+metadata_sensitivity temperature=0.2 lambda_cl=0.1 final: val_RMSE=1.079559 test_RMSE=1.066631
+Saved 4 completed metadata sensitivity row(s): C:\Users\efeoz\OneDrive\Desktop\Cross Domain Yeniden\cross\results_metadata_sensitivity_books_electronics_5core.csv
+
+Saved metadata sensitivity result CSV: C:\Users\efeoz\OneDrive\Desktop\Cross Domain Yeniden\cross\results_metadata_sensitivity_books_electronics_5core.csv

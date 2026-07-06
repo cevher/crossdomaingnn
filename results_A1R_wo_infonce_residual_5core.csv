@@ -1,0 +1,2 @@
+variant,use_llm_init,use_semantic_gate,use_infonce,lambda_cl,temperature,best_epoch,val_rmse,val_mae,val_ndcg10,test_rmse,test_mae,test_ndcg10,final_gamma,final_beta_user,final_beta_item
+A1R_w_o_InfoNCE_Residual,True,True,False,0.0,0.2,17,1.077932976470425,0.633202075958252,0.03137166701028442,1.0670750236162854,0.6290837526321411,0.02829300069564132,0.18078014254570007,0.1705663651227951,0.0879901647567749

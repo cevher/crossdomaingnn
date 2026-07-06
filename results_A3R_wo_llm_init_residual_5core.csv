@@ -1,0 +1,2 @@
+variant,use_llm_init,use_semantic_gate,use_infonce,lambda_cl,temperature,best_epoch,val_rmse,val_mae,val_ndcg10,test_rmse,test_mae,test_ndcg10,final_gamma,final_beta_user,final_beta_item
+A3R_w_o_LLMInitialization_Residual,False,False,True,0.1,0.2,9,1.073439825463587,0.6450878381729126,0.030881559481773235,1.0625185123401624,0.6418125033378601,0.02716602969653339,NA,0.10885042697191238,0.10919278115034103

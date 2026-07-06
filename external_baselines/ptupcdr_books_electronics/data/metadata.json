@@ -1,0 +1,10 @@
+{
+  "iid_all": 35018,
+  "protocol": "shared users -> iterative 5-core per domain -> shared users -> target 80/10/10 interaction split",
+  "seed": 42,
+  "source_domain": "Books",
+  "source_items": 19196,
+  "target_domain": "Electronics",
+  "target_items": 15822,
+  "uid_all": 4513
+}

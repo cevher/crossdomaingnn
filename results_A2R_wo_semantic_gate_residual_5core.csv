@@ -1,0 +1,2 @@
+variant,use_llm_init,use_semantic_gate,use_infonce,lambda_cl,temperature,best_epoch,val_rmse,val_mae,val_ndcg10,test_rmse,test_mae,test_ndcg10,final_gamma,final_beta_user,final_beta_item
+A2R_w_o_SemanticGate_Residual,True,False,True,0.1,0.2,15,1.0777310190566805,0.6339549422264099,0.031046806084870246,1.0701453085301167,0.6311198472976685,0.028324355073108088,NA,0.16546937823295593,0.10403794050216675

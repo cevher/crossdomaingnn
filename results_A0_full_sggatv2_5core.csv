@@ -1,0 +1,2 @@
+variant,use_llm_init,use_semantic_gate,use_infonce,lambda_cl,temperature,best_epoch,val_rmse,val_mae,val_ndcg10,test_rmse,test_mae,test_ndcg10,final_gamma
+A0 Full SG-GATv2,True,True,True,0.1,0.2,2,1.2128306203548578,0.6785841584205627,0.027871860798522233,1.1887271964757058,0.6632491946220398,0.024441313232305348,0.12264696508646011

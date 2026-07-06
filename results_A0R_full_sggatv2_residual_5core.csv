@@ -1,0 +1,2 @@
+variant,use_llm_init,use_semantic_gate,use_infonce,lambda_cl,temperature,best_epoch,val_rmse,val_mae,val_ndcg10,test_rmse,test_mae,test_ndcg10,final_gamma,final_beta_user,final_beta_item
+A0R Full SG-GATv2 with Residual Fusion,True,True,True,0.1,0.2,21,1.0748747885772927,0.6376946568489075,0.03162247947781356,1.0606658475402349,0.6339101195335388,0.027206646930494287,0.18970300257205963,0.17628581821918488,0.12966659665107727

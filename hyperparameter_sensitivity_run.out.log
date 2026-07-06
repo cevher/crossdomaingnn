@@ -1,0 +1,333 @@
+Using device: cuda
+Dataset statistics (iterative 5-core shared-user split)
+  Shared users: 4,513
+  Source Books interactions after shared-user filter: 156,414
+  Target Electronics interactions after shared-user filter: 131,211
+  Users: 4,513
+  Items total: 35,018
+  Target Electronics items: 15,822
+  Target split: train=104,968, val=13,121, test=13,122
+  Test items unseen in target train: 70 (0.89%)
+
+Metadata coverage validation
+  Books source:
+    item text file: books_item_texts_filtered.csv
+    file exists: True
+    item text rows: 1,459,222
+    unique interaction items: 1,459,222
+    exact matched item texts: 1,459,222
+    exact item_id coverage: 100.00%
+    missing/empty/too-short texts (<10 chars): 1,115 (0.08%)
+  Electronics target:
+    item text file: electronics_item_texts_filtered.csv
+    file exists: True
+    item text rows: 489,371
+    unique interaction items: 489,371
+    exact matched item texts: 489,371
+    exact item_id coverage: 100.00%
+    missing/empty/too-short texts (<10 chars): 43 (0.01%)
+
+  Random Books item-text examples:
+    item_id: 1571517235
+    text: Easter Colors Book by Dandi Daley Mackall
+    item_id: 0829436235
+    text: Simple Faith: Moving Beyond Religion as You Know It to Grow in Your Relationship with God For many people, faith is based on creeds, doctrine, and head knowledge. It's about mastering the "facts" and having the "right" answers. But best-selling author Margaret Silf believes that faith is not about m
+    item_id: 1592531717
+    text: Polymer Clay Surface Design Recipes: 100 Mixed-Media Techniques Plus Project Ideas Regardless of your level of experience with polymer clay, the techniques and recipes for creating for combining clay with other media will inspire you to create unique surface designs. In addition to covering basic po
+    item_id: 1328702278
+    text: After the Shot Drops A powerful novel about friendship, basketball, and one teen’s mission to create a better life for his family. Written in the tradition of Jason Reynolds, Matt de la Peña, and Walter Dean Myers, After the Shot Drops now has three starred reviews! * “Belongs on the shelf alongside
+    item_id: 1976453674
+    text: The Three Rings: An Adventure for Four Against Darkness for characters of level 3 and 4 The Three Rings is and adventure for Four Against Darkness. It is recommended for character levels 3 and 4. While exploring a forest, the party stumbles upon a young nobleman. His three seal rings have been stole
+
+  Random Electronics item-text examples:
+    item_id: B01M1R6NAZ
+    text: Ultimate Support ULTI-BOOM PRO - FB Fixed Length Microphone Boom Arm with One-touch Adjustment and Die-Cast Counterweight Ergonomic adjustment knobs Heavy-duty counterweight Aluminum tubing with architectural Anodized finish Country of Origin: China Cassette tapes and black and white televisions hav
+    item_id: B0764GQBPT
+    text: HiVi Acoustics Swans- DIY 2.2A - DIY Speaker Kit - 2-Way Bookshelf Speakers Near-Field Use - Compact Wooden Cabinet - Pair - Black 2.2 BOOKSHELF SPEAKERS – Full-range sound for accurate image and balanced frequency response; CLASSIC DESIGN - A two-way fourth vented bookshelf speakers with aesthetic 
+    item_id: B0777PH7R2
+    text: Esky Wireless RF Item Locator Key Finder Item Tracker Phone Tracker Finder Anything Finder with 1 RF Transmitter 4 Receivers Remote Control, Pet, Wallet, Cat Tracker (ES-KF03-WE) BEEPS AND FLASHES: Uses loud sounds and LED light prompts to help you find lost cats, keys, and remote controls. Let what
+    item_id: B0B75GY6RV
+    text: WONNIE 10" Car DVD Players, Portable DVD Player Dual Screen Play Two Different or The Same Movie with 2 Headrest Mount, 5 Hours Rechargeable Battery, Last Memory, AV Out&in, Support USB/SD/Sync TV 🚓🚓【𝟐 𝐱 𝐂𝐚𝐫 𝐃𝐕𝐃 𝐏𝐥𝐚𝐲𝐞𝐫】WONNIE 2023 New generation 10 inches dual dvd players for car adopt newly chip te
+    item_id: B01KXBCMTW
+    text: iPad Pro 12.9 Inch Case - Samgg 360 Degree Rotating Stand Leather Case with Smart Cover Auto Sleep/Wake Feature for Apple 12.9-inch iPad Pro (2015 Version) (Paisley Waves 2) Electronics Computers & Accessories Tablet Accessories Bags, Cases & Sleeves Cases
+
+Embedding cache validation
+  books:
+    embeddings: books_item_embeddings.pt exists=True
+    index map: books_item_id_to_index.json exists=True
+    embedding shape: (1459222, 384)
+    mapped item ids: 1,459,222
+  electronics:
+    embeddings: electronics_item_embeddings.pt exists=True
+    index map: electronics_item_id_to_index.json exists=True
+    embedding shape: (489371, 384)
+    mapped item ids: 489,371
+
+Running temperature sensitivity: temperature=0.1, lambda_cl=0.1
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 001 train_loss=2.856763 val_RMSE=1.208501 val_MAE=0.685164 val_NDCG@10=0.028112
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 002 train_loss=2.198932 val_RMSE=1.210931 val_MAE=0.666829 val_NDCG@10=0.027989
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 003 train_loss=2.198992 val_RMSE=1.211268 val_MAE=0.666127 val_NDCG@10=0.027737
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 004 train_loss=2.194806 val_RMSE=1.210440 val_MAE=0.666863 val_NDCG@10=0.028110
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 005 train_loss=2.188624 val_RMSE=1.208862 val_MAE=0.670281 val_NDCG@10=0.028372
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 006 train_loss=2.177932 val_RMSE=1.205726 val_MAE=0.680528 val_NDCG@10=0.027892
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 007 train_loss=2.157980 val_RMSE=1.200902 val_MAE=0.694131 val_NDCG@10=0.028136
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 008 train_loss=2.122394 val_RMSE=1.192265 val_MAE=0.689180 val_NDCG@10=0.028166
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 009 train_loss=2.051205 val_RMSE=1.175734 val_MAE=0.683246 val_NDCG@10=0.028243
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 010 train_loss=1.949039 val_RMSE=1.153516 val_MAE=0.673088 val_NDCG@10=0.027708
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 011 train_loss=1.840783 val_RMSE=1.128581 val_MAE=0.655515 val_NDCG@10=0.026757
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 012 train_loss=1.730457 val_RMSE=1.109739 val_MAE=0.652881 val_NDCG@10=0.027533
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 013 train_loss=1.635096 val_RMSE=1.093119 val_MAE=0.634716 val_NDCG@10=0.030054
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 014 train_loss=1.556579 val_RMSE=1.083509 val_MAE=0.644736 val_NDCG@10=0.029023
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 015 train_loss=1.487830 val_RMSE=1.078939 val_MAE=0.635721 val_NDCG@10=0.030393
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 016 train_loss=1.433851 val_RMSE=1.078954 val_MAE=0.646208 val_NDCG@10=0.030044
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 017 train_loss=1.388778 val_RMSE=1.081887 val_MAE=0.651983 val_NDCG@10=0.031495
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 018 train_loss=1.345843 val_RMSE=1.080181 val_MAE=0.654130 val_NDCG@10=0.031362
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 019 train_loss=1.307055 val_RMSE=1.079732 val_MAE=0.661570 val_NDCG@10=0.030797
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 020 train_loss=1.264576 val_RMSE=1.075884 val_MAE=0.652903 val_NDCG@10=0.031558
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 021 train_loss=1.226583 val_RMSE=1.072731 val_MAE=0.641193 val_NDCG@10=0.031085
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 022 train_loss=1.190333 val_RMSE=1.073386 val_MAE=0.647076 val_NDCG@10=0.031990
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 023 train_loss=1.157690 val_RMSE=1.074608 val_MAE=0.647912 val_NDCG@10=0.031757
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 024 train_loss=1.128650 val_RMSE=1.078164 val_MAE=0.653725 val_NDCG@10=0.031824
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 025 train_loss=1.099454 val_RMSE=1.071653 val_MAE=0.641196 val_NDCG@10=0.029806
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 026 train_loss=1.068908 val_RMSE=1.083857 val_MAE=0.657549 val_NDCG@10=0.032029
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 027 train_loss=1.043400 val_RMSE=1.081748 val_MAE=0.651816 val_NDCG@10=0.031845
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 028 train_loss=1.015750 val_RMSE=1.084313 val_MAE=0.655833 val_NDCG@10=0.031817
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 029 train_loss=0.990134 val_RMSE=1.093717 val_MAE=0.670045 val_NDCG@10=0.032002
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 epoch 030 train_loss=0.962559 val_RMSE=1.088210 val_MAE=0.659856 val_NDCG@10=0.031574
+temperature_sensitivity temperature=0.1 lambda_cl=0.1: early stopping at epoch 30; best epoch was 25.
+temperature_sensitivity temperature=0.1 lambda_cl=0.1 final: val_RMSE=1.071653 test_RMSE=1.057355
+
+Running temperature sensitivity: temperature=0.2, lambda_cl=0.1
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 001 train_loss=2.837781 val_RMSE=1.208451 val_MAE=0.685163 val_NDCG@10=0.028276
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 002 train_loss=2.199176 val_RMSE=1.210916 val_MAE=0.666811 val_NDCG@10=0.027988
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 003 train_loss=2.201285 val_RMSE=1.211277 val_MAE=0.666087 val_NDCG@10=0.027892
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 004 train_loss=2.198682 val_RMSE=1.210443 val_MAE=0.666786 val_NDCG@10=0.028127
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 005 train_loss=2.194152 val_RMSE=1.208945 val_MAE=0.670083 val_NDCG@10=0.027997
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 006 train_loss=2.186059 val_RMSE=1.206132 val_MAE=0.679437 val_NDCG@10=0.028962
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 007 train_loss=2.169671 val_RMSE=1.201638 val_MAE=0.692442 val_NDCG@10=0.028431
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 008 train_loss=2.140147 val_RMSE=1.193690 val_MAE=0.691084 val_NDCG@10=0.028876
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 009 train_loss=2.076031 val_RMSE=1.178050 val_MAE=0.683288 val_NDCG@10=0.028197
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 010 train_loss=1.981846 val_RMSE=1.157748 val_MAE=0.669746 val_NDCG@10=0.028329
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 011 train_loss=1.882559 val_RMSE=1.132235 val_MAE=0.653609 val_NDCG@10=0.027629
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 012 train_loss=1.779720 val_RMSE=1.112538 val_MAE=0.651457 val_NDCG@10=0.028226
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 013 train_loss=1.691467 val_RMSE=1.096871 val_MAE=0.636143 val_NDCG@10=0.031103
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 014 train_loss=1.622611 val_RMSE=1.087822 val_MAE=0.646944 val_NDCG@10=0.029585
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 015 train_loss=1.565086 val_RMSE=1.077768 val_MAE=0.635120 val_NDCG@10=0.030658
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 016 train_loss=1.523640 val_RMSE=1.079283 val_MAE=0.646340 val_NDCG@10=0.031010
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 017 train_loss=1.492358 val_RMSE=1.080633 val_MAE=0.650146 val_NDCG@10=0.031751
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 018 train_loss=1.462831 val_RMSE=1.081224 val_MAE=0.650009 val_NDCG@10=0.031183
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 019 train_loss=1.434838 val_RMSE=1.079337 val_MAE=0.649531 val_NDCG@10=0.031753
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 020 train_loss=1.404774 val_RMSE=1.076695 val_MAE=0.640377 val_NDCG@10=0.031738
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 021 train_loss=1.375703 val_RMSE=1.074643 val_MAE=0.635878 val_NDCG@10=0.032542
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 022 train_loss=1.347143 val_RMSE=1.075422 val_MAE=0.640762 val_NDCG@10=0.031972
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 023 train_loss=1.317098 val_RMSE=1.078726 val_MAE=0.640168 val_NDCG@10=0.031950
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 024 train_loss=1.288373 val_RMSE=1.082375 val_MAE=0.648426 val_NDCG@10=0.031864
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 025 train_loss=1.257397 val_RMSE=1.084259 val_MAE=0.649059 val_NDCG@10=0.032214
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 epoch 026 train_loss=1.228099 val_RMSE=1.087137 val_MAE=0.652761 val_NDCG@10=0.032247
+temperature_sensitivity temperature=0.2 lambda_cl=0.1: early stopping at epoch 26; best epoch was 21.
+temperature_sensitivity temperature=0.2 lambda_cl=0.1 final: val_RMSE=1.074643 test_RMSE=1.060396
+
+Running temperature sensitivity: temperature=0.5, lambda_cl=0.1
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 001 train_loss=2.831337 val_RMSE=1.208414 val_MAE=0.685168 val_NDCG@10=0.028240
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 002 train_loss=2.199072 val_RMSE=1.210895 val_MAE=0.666824 val_NDCG@10=0.028204
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 003 train_loss=2.202039 val_RMSE=1.211275 val_MAE=0.666080 val_NDCG@10=0.028037
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 004 train_loss=2.200148 val_RMSE=1.210471 val_MAE=0.666729 val_NDCG@10=0.028266
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 005 train_loss=2.196291 val_RMSE=1.209022 val_MAE=0.669872 val_NDCG@10=0.028134
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 006 train_loss=2.189394 val_RMSE=1.206374 val_MAE=0.678550 val_NDCG@10=0.028273
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 007 train_loss=2.175031 val_RMSE=1.202260 val_MAE=0.690823 val_NDCG@10=0.028152
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 008 train_loss=2.149874 val_RMSE=1.195449 val_MAE=0.690964 val_NDCG@10=0.028308
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 009 train_loss=2.092601 val_RMSE=1.180665 val_MAE=0.683354 val_NDCG@10=0.027560
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 010 train_loss=2.002823 val_RMSE=1.161012 val_MAE=0.670038 val_NDCG@10=0.028931
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 011 train_loss=1.906363 val_RMSE=1.134483 val_MAE=0.657410 val_NDCG@10=0.027170
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 012 train_loss=1.807431 val_RMSE=1.114553 val_MAE=0.653258 val_NDCG@10=0.030267
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 013 train_loss=1.723156 val_RMSE=1.098297 val_MAE=0.637175 val_NDCG@10=0.030120
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 014 train_loss=1.658264 val_RMSE=1.089607 val_MAE=0.648366 val_NDCG@10=0.031248
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 015 train_loss=1.604251 val_RMSE=1.079928 val_MAE=0.638621 val_NDCG@10=0.029181
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 016 train_loss=1.566769 val_RMSE=1.079781 val_MAE=0.641310 val_NDCG@10=0.030132
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 017 train_loss=1.540302 val_RMSE=1.081908 val_MAE=0.646793 val_NDCG@10=0.031417
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 018 train_loss=1.519439 val_RMSE=1.082298 val_MAE=0.650550 val_NDCG@10=0.031259
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 019 train_loss=1.500744 val_RMSE=1.081065 val_MAE=0.650196 val_NDCG@10=0.032111
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 020 train_loss=1.481850 val_RMSE=1.078914 val_MAE=0.639606 val_NDCG@10=0.032016
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 021 train_loss=1.463855 val_RMSE=1.078401 val_MAE=0.633367 val_NDCG@10=0.031385
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 022 train_loss=1.447866 val_RMSE=1.081059 val_MAE=0.638581 val_NDCG@10=0.031753
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 023 train_loss=1.428459 val_RMSE=1.081772 val_MAE=0.637540 val_NDCG@10=0.031820
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 024 train_loss=1.409233 val_RMSE=1.088179 val_MAE=0.648846 val_NDCG@10=0.032148
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 025 train_loss=1.389099 val_RMSE=1.091443 val_MAE=0.649908 val_NDCG@10=0.032346
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 epoch 026 train_loss=1.367528 val_RMSE=1.094250 val_MAE=0.652151 val_NDCG@10=0.032635
+temperature_sensitivity temperature=0.5 lambda_cl=0.1: early stopping at epoch 26; best epoch was 21.
+temperature_sensitivity temperature=0.5 lambda_cl=0.1 final: val_RMSE=1.078401 test_RMSE=1.064471
+
+Running temperature sensitivity: temperature=1, lambda_cl=0.1
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 001 train_loss=2.830269 val_RMSE=1.208405 val_MAE=0.685186 val_NDCG@10=0.028320
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 002 train_loss=2.198957 val_RMSE=1.210888 val_MAE=0.666829 val_NDCG@10=0.028305
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 003 train_loss=2.202076 val_RMSE=1.211254 val_MAE=0.666102 val_NDCG@10=0.027873
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 004 train_loss=2.200246 val_RMSE=1.210423 val_MAE=0.666782 val_NDCG@10=0.027988
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 005 train_loss=2.196399 val_RMSE=1.208946 val_MAE=0.670124 val_NDCG@10=0.027946
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 006 train_loss=2.189430 val_RMSE=1.206239 val_MAE=0.679302 val_NDCG@10=0.028420
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 007 train_loss=2.175135 val_RMSE=1.202119 val_MAE=0.691359 val_NDCG@10=0.028263
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 008 train_loss=2.149636 val_RMSE=1.195237 val_MAE=0.690740 val_NDCG@10=0.028469
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 009 train_loss=2.091751 val_RMSE=1.180367 val_MAE=0.682333 val_NDCG@10=0.028024
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 010 train_loss=2.002144 val_RMSE=1.161064 val_MAE=0.671637 val_NDCG@10=0.029141
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 011 train_loss=1.907059 val_RMSE=1.135148 val_MAE=0.656750 val_NDCG@10=0.027420
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 012 train_loss=1.808012 val_RMSE=1.114293 val_MAE=0.652194 val_NDCG@10=0.029243
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 013 train_loss=1.723743 val_RMSE=1.097859 val_MAE=0.637033 val_NDCG@10=0.030292
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 014 train_loss=1.659998 val_RMSE=1.089599 val_MAE=0.649688 val_NDCG@10=0.030919
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 015 train_loss=1.607256 val_RMSE=1.082242 val_MAE=0.641504 val_NDCG@10=0.029883
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 016 train_loss=1.571208 val_RMSE=1.080889 val_MAE=0.645851 val_NDCG@10=0.030339
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 017 train_loss=1.546449 val_RMSE=1.083360 val_MAE=0.650099 val_NDCG@10=0.031824
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 018 train_loss=1.526772 val_RMSE=1.083435 val_MAE=0.652766 val_NDCG@10=0.030969
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 019 train_loss=1.511342 val_RMSE=1.083389 val_MAE=0.655337 val_NDCG@10=0.031419
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 020 train_loss=1.493821 val_RMSE=1.077576 val_MAE=0.637901 val_NDCG@10=0.030636
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 021 train_loss=1.476726 val_RMSE=1.078474 val_MAE=0.638882 val_NDCG@10=0.030542
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 022 train_loss=1.462608 val_RMSE=1.081221 val_MAE=0.643473 val_NDCG@10=0.030147
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 023 train_loss=1.447604 val_RMSE=1.081161 val_MAE=0.639234 val_NDCG@10=0.030343
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 024 train_loss=1.434782 val_RMSE=1.083821 val_MAE=0.643993 val_NDCG@10=0.029749
+temperature_sensitivity temperature=1 lambda_cl=0.1 epoch 025 train_loss=1.422277 val_RMSE=1.087125 val_MAE=0.644298 val_NDCG@10=0.031017
+temperature_sensitivity temperature=1 lambda_cl=0.1: early stopping at epoch 25; best epoch was 20.
+temperature_sensitivity temperature=1 lambda_cl=0.1 final: val_RMSE=1.077576 test_RMSE=1.063690
+
+Running lambda sensitivity: temperature=0.2, lambda_cl=0.01
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 001 train_loss=2.144518 val_RMSE=1.208407 val_MAE=0.685176 val_NDCG@10=0.028292
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 002 train_loss=1.512939 val_RMSE=1.210888 val_MAE=0.666827 val_NDCG@10=0.028202
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 003 train_loss=1.516020 val_RMSE=1.211258 val_MAE=0.666094 val_NDCG@10=0.027834
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 004 train_loss=1.514234 val_RMSE=1.210445 val_MAE=0.666752 val_NDCG@10=0.028120
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 005 train_loss=1.510464 val_RMSE=1.208997 val_MAE=0.670030 val_NDCG@10=0.027744
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 006 train_loss=1.503675 val_RMSE=1.206350 val_MAE=0.679015 val_NDCG@10=0.028835
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 007 train_loss=1.489611 val_RMSE=1.202311 val_MAE=0.690887 val_NDCG@10=0.028102
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 008 train_loss=1.464975 val_RMSE=1.195660 val_MAE=0.690839 val_NDCG@10=0.028060
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 009 train_loss=1.408530 val_RMSE=1.181115 val_MAE=0.683211 val_NDCG@10=0.028444
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 010 train_loss=1.319800 val_RMSE=1.161401 val_MAE=0.669748 val_NDCG@10=0.028405
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 011 train_loss=1.224611 val_RMSE=1.135561 val_MAE=0.659760 val_NDCG@10=0.027151
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 012 train_loss=1.127111 val_RMSE=1.114320 val_MAE=0.652523 val_NDCG@10=0.029675
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 013 train_loss=1.043166 val_RMSE=1.099086 val_MAE=0.637924 val_NDCG@10=0.030322
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 014 train_loss=0.977977 val_RMSE=1.089199 val_MAE=0.647874 val_NDCG@10=0.031908
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 015 train_loss=0.925275 val_RMSE=1.081809 val_MAE=0.639598 val_NDCG@10=0.029851
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 016 train_loss=0.890041 val_RMSE=1.082480 val_MAE=0.646013 val_NDCG@10=0.030711
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 017 train_loss=0.865608 val_RMSE=1.085047 val_MAE=0.651569 val_NDCG@10=0.031167
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 018 train_loss=0.846968 val_RMSE=1.085107 val_MAE=0.652856 val_NDCG@10=0.031217
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 019 train_loss=0.831516 val_RMSE=1.083990 val_MAE=0.655368 val_NDCG@10=0.032528
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 020 train_loss=0.814318 val_RMSE=1.078131 val_MAE=0.637557 val_NDCG@10=0.031600
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 021 train_loss=0.798954 val_RMSE=1.079800 val_MAE=0.637812 val_NDCG@10=0.030693
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 022 train_loss=0.785380 val_RMSE=1.083269 val_MAE=0.643185 val_NDCG@10=0.030515
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 023 train_loss=0.771288 val_RMSE=1.084517 val_MAE=0.639820 val_NDCG@10=0.029405
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 024 train_loss=0.760141 val_RMSE=1.085818 val_MAE=0.643138 val_NDCG@10=0.029860
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 epoch 025 train_loss=0.748875 val_RMSE=1.091119 val_MAE=0.647036 val_NDCG@10=0.029995
+lambda_sensitivity temperature=0.2 lambda_cl=0.01: early stopping at epoch 25; best epoch was 20.
+lambda_sensitivity temperature=0.2 lambda_cl=0.01 final: val_RMSE=1.078131 test_RMSE=1.065245
+
+Running lambda sensitivity: temperature=0.2, lambda_cl=0.05
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 001 train_loss=2.452894 val_RMSE=1.208428 val_MAE=0.685134 val_NDCG@10=0.028127
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 002 train_loss=1.818239 val_RMSE=1.210924 val_MAE=0.666793 val_NDCG@10=0.028084
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 003 train_loss=1.820940 val_RMSE=1.211298 val_MAE=0.666048 val_NDCG@10=0.027939
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 004 train_loss=1.818927 val_RMSE=1.210505 val_MAE=0.666691 val_NDCG@10=0.028335
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 005 train_loss=1.815029 val_RMSE=1.209045 val_MAE=0.669835 val_NDCG@10=0.028140
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 006 train_loss=1.808109 val_RMSE=1.206414 val_MAE=0.678331 val_NDCG@10=0.028522
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 007 train_loss=1.793895 val_RMSE=1.202289 val_MAE=0.690343 val_NDCG@10=0.028488
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 008 train_loss=1.769284 val_RMSE=1.195422 val_MAE=0.690889 val_NDCG@10=0.029172
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 009 train_loss=1.712993 val_RMSE=1.181005 val_MAE=0.683589 val_NDCG@10=0.027878
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 010 train_loss=1.624108 val_RMSE=1.161760 val_MAE=0.669433 val_NDCG@10=0.028657
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 011 train_loss=1.526200 val_RMSE=1.135831 val_MAE=0.660575 val_NDCG@10=0.026596
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 012 train_loss=1.426760 val_RMSE=1.113357 val_MAE=0.648175 val_NDCG@10=0.029246
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 013 train_loss=1.340908 val_RMSE=1.097161 val_MAE=0.636012 val_NDCG@10=0.030103
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 014 train_loss=1.276360 val_RMSE=1.089584 val_MAE=0.648641 val_NDCG@10=0.031036
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 015 train_loss=1.220156 val_RMSE=1.081174 val_MAE=0.637004 val_NDCG@10=0.029995
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 016 train_loss=1.183130 val_RMSE=1.084200 val_MAE=0.650533 val_NDCG@10=0.030391
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 017 train_loss=1.156140 val_RMSE=1.081726 val_MAE=0.646310 val_NDCG@10=0.030803
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 018 train_loss=1.133760 val_RMSE=1.080014 val_MAE=0.645358 val_NDCG@10=0.031027
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 019 train_loss=1.116351 val_RMSE=1.080815 val_MAE=0.651461 val_NDCG@10=0.032003
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 020 train_loss=1.097993 val_RMSE=1.078851 val_MAE=0.640377 val_NDCG@10=0.031781
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 021 train_loss=1.079331 val_RMSE=1.077687 val_MAE=0.631878 val_NDCG@10=0.031381
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 022 train_loss=1.062655 val_RMSE=1.080911 val_MAE=0.639231 val_NDCG@10=0.030802
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 023 train_loss=1.042705 val_RMSE=1.079683 val_MAE=0.636328 val_NDCG@10=0.031757
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 024 train_loss=1.025276 val_RMSE=1.081570 val_MAE=0.641252 val_NDCG@10=0.031685
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 025 train_loss=1.007977 val_RMSE=1.086072 val_MAE=0.644762 val_NDCG@10=0.032775
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 epoch 026 train_loss=0.989021 val_RMSE=1.089053 val_MAE=0.647698 val_NDCG@10=0.031542
+lambda_sensitivity temperature=0.2 lambda_cl=0.05: early stopping at epoch 26; best epoch was 21.
+lambda_sensitivity temperature=0.2 lambda_cl=0.05 final: val_RMSE=1.077687 test_RMSE=1.064689
+
+Running lambda sensitivity: temperature=0.2, lambda_cl=0.1
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 001 train_loss=2.837781 val_RMSE=1.208451 val_MAE=0.685163 val_NDCG@10=0.028276
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 002 train_loss=2.199176 val_RMSE=1.210916 val_MAE=0.666811 val_NDCG@10=0.027988
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 003 train_loss=2.201285 val_RMSE=1.211277 val_MAE=0.666087 val_NDCG@10=0.027892
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 004 train_loss=2.198682 val_RMSE=1.210443 val_MAE=0.666786 val_NDCG@10=0.028127
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 005 train_loss=2.194152 val_RMSE=1.208945 val_MAE=0.670083 val_NDCG@10=0.027997
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 006 train_loss=2.186059 val_RMSE=1.206132 val_MAE=0.679437 val_NDCG@10=0.028962
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 007 train_loss=2.169671 val_RMSE=1.201638 val_MAE=0.692442 val_NDCG@10=0.028431
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 008 train_loss=2.140147 val_RMSE=1.193690 val_MAE=0.691084 val_NDCG@10=0.028876
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 009 train_loss=2.076031 val_RMSE=1.178050 val_MAE=0.683288 val_NDCG@10=0.028197
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 010 train_loss=1.981846 val_RMSE=1.157748 val_MAE=0.669746 val_NDCG@10=0.028329
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 011 train_loss=1.882559 val_RMSE=1.132235 val_MAE=0.653609 val_NDCG@10=0.027629
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 012 train_loss=1.779720 val_RMSE=1.112538 val_MAE=0.651457 val_NDCG@10=0.028226
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 013 train_loss=1.691467 val_RMSE=1.096871 val_MAE=0.636144 val_NDCG@10=0.030993
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 014 train_loss=1.622605 val_RMSE=1.087793 val_MAE=0.646902 val_NDCG@10=0.029619
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 015 train_loss=1.565081 val_RMSE=1.077759 val_MAE=0.634985 val_NDCG@10=0.030443
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 016 train_loss=1.523819 val_RMSE=1.079593 val_MAE=0.646866 val_NDCG@10=0.031400
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 017 train_loss=1.492507 val_RMSE=1.081013 val_MAE=0.650551 val_NDCG@10=0.031966
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 018 train_loss=1.462846 val_RMSE=1.080977 val_MAE=0.649242 val_NDCG@10=0.030609
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 019 train_loss=1.435025 val_RMSE=1.079764 val_MAE=0.650026 val_NDCG@10=0.032100
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 020 train_loss=1.404948 val_RMSE=1.077519 val_MAE=0.641728 val_NDCG@10=0.031612
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 021 train_loss=1.375365 val_RMSE=1.075900 val_MAE=0.637437 val_NDCG@10=0.032712
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 022 train_loss=1.346927 val_RMSE=1.076480 val_MAE=0.641558 val_NDCG@10=0.032374
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 023 train_loss=1.316987 val_RMSE=1.079581 val_MAE=0.641780 val_NDCG@10=0.033018
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 024 train_loss=1.289016 val_RMSE=1.083392 val_MAE=0.650034 val_NDCG@10=0.032399
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 025 train_loss=1.258337 val_RMSE=1.084746 val_MAE=0.649772 val_NDCG@10=0.032609
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 epoch 026 train_loss=1.228342 val_RMSE=1.087625 val_MAE=0.654675 val_NDCG@10=0.030771
+lambda_sensitivity temperature=0.2 lambda_cl=0.1: early stopping at epoch 26; best epoch was 21.
+lambda_sensitivity temperature=0.2 lambda_cl=0.1 final: val_RMSE=1.075900 test_RMSE=1.061452
+
+Running lambda sensitivity: temperature=0.2, lambda_cl=0.2
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 001 train_loss=3.606861 val_RMSE=1.208490 val_MAE=0.685183 val_NDCG@10=0.028524
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 002 train_loss=2.959910 val_RMSE=1.210907 val_MAE=0.666841 val_NDCG@10=0.028110
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 003 train_loss=2.960456 val_RMSE=1.211244 val_MAE=0.666139 val_NDCG@10=0.027844
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 004 train_loss=2.956053 val_RMSE=1.210339 val_MAE=0.666923 val_NDCG@10=0.027999
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 005 train_loss=2.949027 val_RMSE=1.208692 val_MAE=0.670538 val_NDCG@10=0.028180
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 006 train_loss=2.936378 val_RMSE=1.205278 val_MAE=0.681699 val_NDCG@10=0.028279
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 007 train_loss=2.912686 val_RMSE=1.199994 val_MAE=0.694196 val_NDCG@10=0.028067
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 008 train_loss=2.868522 val_RMSE=1.190062 val_MAE=0.685210 val_NDCG@10=0.027558
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 009 train_loss=2.784264 val_RMSE=1.171046 val_MAE=0.676448 val_NDCG@10=0.028453
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 010 train_loss=2.670763 val_RMSE=1.149786 val_MAE=0.679954 val_NDCG@10=0.028235
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 011 train_loss=2.551890 val_RMSE=1.124995 val_MAE=0.663437 val_NDCG@10=0.027738
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 012 train_loss=2.426790 val_RMSE=1.104841 val_MAE=0.656803 val_NDCG@10=0.029196
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 013 train_loss=2.323987 val_RMSE=1.089018 val_MAE=0.633955 val_NDCG@10=0.029302
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 014 train_loss=2.237377 val_RMSE=1.080087 val_MAE=0.644378 val_NDCG@10=0.031884
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 015 train_loss=2.159755 val_RMSE=1.075372 val_MAE=0.639870 val_NDCG@10=0.030776
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 016 train_loss=2.099703 val_RMSE=1.073823 val_MAE=0.646109 val_NDCG@10=0.031744
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 017 train_loss=2.048199 val_RMSE=1.077974 val_MAE=0.653641 val_NDCG@10=0.031249
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 018 train_loss=2.002302 val_RMSE=1.074761 val_MAE=0.656286 val_NDCG@10=0.031785
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 019 train_loss=1.961085 val_RMSE=1.074254 val_MAE=0.666243 val_NDCG@10=0.030910
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 020 train_loss=1.918673 val_RMSE=1.071911 val_MAE=0.654802 val_NDCG@10=0.031892
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 021 train_loss=1.881856 val_RMSE=1.069528 val_MAE=0.644388 val_NDCG@10=0.032869
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 022 train_loss=1.846901 val_RMSE=1.072742 val_MAE=0.651560 val_NDCG@10=0.033078
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 023 train_loss=1.815082 val_RMSE=1.072294 val_MAE=0.651731 val_NDCG@10=0.031997
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 024 train_loss=1.787181 val_RMSE=1.076301 val_MAE=0.654850 val_NDCG@10=0.032970
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 025 train_loss=1.757631 val_RMSE=1.073183 val_MAE=0.648307 val_NDCG@10=0.033737
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 epoch 026 train_loss=1.727751 val_RMSE=1.086373 val_MAE=0.664771 val_NDCG@10=0.034329
+lambda_sensitivity temperature=0.2 lambda_cl=0.2: early stopping at epoch 26; best epoch was 21.
+lambda_sensitivity temperature=0.2 lambda_cl=0.2 final: val_RMSE=1.069528 test_RMSE=1.054767
+
+Running lambda sensitivity: temperature=0.2, lambda_cl=0.5
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 001 train_loss=5.909012 val_RMSE=1.208551 val_MAE=0.685469 val_NDCG@10=0.028043
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 002 train_loss=5.235052 val_RMSE=1.210818 val_MAE=0.666999 val_NDCG@10=0.028069
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 003 train_loss=5.227069 val_RMSE=1.211022 val_MAE=0.666477 val_NDCG@10=0.027916
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 004 train_loss=5.207409 val_RMSE=1.209621 val_MAE=0.668170 val_NDCG@10=0.028564
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 005 train_loss=5.176958 val_RMSE=1.206480 val_MAE=0.675656 val_NDCG@10=0.027253
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 006 train_loss=5.127194 val_RMSE=1.201891 val_MAE=0.697717 val_NDCG@10=0.028873
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 007 train_loss=5.045172 val_RMSE=1.191587 val_MAE=0.689996 val_NDCG@10=0.028958
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 008 train_loss=4.898085 val_RMSE=1.169834 val_MAE=0.684765 val_NDCG@10=0.028778
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 009 train_loss=4.689300 val_RMSE=1.139217 val_MAE=0.668434 val_NDCG@10=0.028784
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 010 train_loss=4.458445 val_RMSE=1.113877 val_MAE=0.656310 val_NDCG@10=0.028349
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 011 train_loss=4.247419 val_RMSE=1.098234 val_MAE=0.657077 val_NDCG@10=0.029381
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 012 train_loss=4.067196 val_RMSE=1.080362 val_MAE=0.655641 val_NDCG@10=0.030660
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 013 train_loss=3.947189 val_RMSE=1.069233 val_MAE=0.648747 val_NDCG@10=0.032792
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 014 train_loss=3.849180 val_RMSE=1.069289 val_MAE=0.663005 val_NDCG@10=0.032797
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 015 train_loss=3.775383 val_RMSE=1.058979 val_MAE=0.642842 val_NDCG@10=0.030554
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 016 train_loss=3.710759 val_RMSE=1.056560 val_MAE=0.636972 val_NDCG@10=0.030040
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 017 train_loss=3.661416 val_RMSE=1.069963 val_MAE=0.661107 val_NDCG@10=0.030753
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 018 train_loss=3.614083 val_RMSE=1.065785 val_MAE=0.656741 val_NDCG@10=0.033136
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 019 train_loss=3.576578 val_RMSE=1.058181 val_MAE=0.644880 val_NDCG@10=0.031716
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 020 train_loss=3.535940 val_RMSE=1.065685 val_MAE=0.658293 val_NDCG@10=0.031038
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 epoch 021 train_loss=3.504961 val_RMSE=1.066382 val_MAE=0.654830 val_NDCG@10=0.032051
+lambda_sensitivity temperature=0.2 lambda_cl=0.5: early stopping at epoch 21; best epoch was 16.
+lambda_sensitivity temperature=0.2 lambda_cl=0.5 final: val_RMSE=1.056560 test_RMSE=1.044218
+
+Saved hyperparameter sensitivity result CSV: C:\Users\efeoz\OneDrive\Desktop\Cross Domain Yeniden\cross\results_hyperparameter_sensitivity_books_electronics_5core.csv
